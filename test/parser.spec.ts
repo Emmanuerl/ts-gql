@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import { globalTrim } from "./helpers";
-import { parse } from "../lib/core/parser";
+import { parse } from "../src/lib/core/parser";
 
 describe("Parser Function", () => {
   it("parses a file with a single definition", async () => {

@@ -10,14 +10,14 @@ export interface Config {
   /**
    * directory that holds interfaces
    */
-  interface_dir: string;
+  interfaceDir: string;
 }
 
 export async function api(config: Config): Promise<string> {
-  if (!config?.interface_dir)
+  if (!config?.interfaceDir)
     throw new Error("config.inteface_dir not specified");
 
-  const files = await ls(config.interface_dir);
+  const files = await ls(config.interfaceDir);
   if (files.length === 0) return "";
 
   let blob = "";

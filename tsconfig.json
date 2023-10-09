@@ -6,17 +6,17 @@
     "lib": ["ES2021"],
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "./lib",
+    "rootDir": "src",
     "strict": false,
     "noImplicitAny": false,
     "noUnusedLocals": true,
     "moduleResolution": "node",
-    "baseUrl": "./lib",
+    "baseUrl": "src/lib",
     "typeRoots": ["./node_modules/@types"],
     "types": ["jest", "node"],
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["lib/**/*"]
+  "include": ["src/**/*"]
 }

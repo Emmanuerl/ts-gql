@@ -1,6 +1,6 @@
-import { GqlType } from "../../src/lib";
+import { GqlType } from "../../lib";
 
-interface Book {
+export interface Book {
   __kind: GqlType.TYPE;
   id: string;
   name: string;
@@ -15,12 +15,12 @@ interface Author {
   age?: number;
 }
 
-interface Filter {
+export interface Filter {
   __kind: GqlType.INPUT;
   rating?: number;
 }
 
-interface Response {
+export interface Response {
   __kind: GqlType.TYPE;
   books: Book[];
 }
