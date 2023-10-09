@@ -8,12 +8,21 @@
  * write file
  */
 import fs from "fs/promises";
-
+import path from "path";
 /**
- * reads a directory
+ * reads a directory for all ts files
  * @param path
- * @returns
+ * @returns list of only ts files in that directory
  */
-export async function ls(path: string) {
-  return (await fs.readdir(path)).toString();
+export async function ls(directory: string): Promise<string[]> {
+  try {
+    const call = await fs.readdir(directory);
+    const list = call.toString();
+    return list
+      .split(",")
+      .filter((f) => /\.ts$/i.test(f))
+      .map((f) => path.join(directory, f));
+  } catch (err) {
+    throw new Error(`unable to read path: "${directory}"`);
+  }
 }
