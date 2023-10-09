@@ -1,0 +1,20 @@
+type BookType {
+  id: String!
+  name: String!
+  rating: Int!
+  authors: [AuthorType]!
+}
+
+type AuthorType {
+  id: String!
+  name: String!
+  age: Int
+}
+
+input FilterInput {
+  rating: Int
+}
+
+type ResponseType {
+  books: [BookType]!
+}

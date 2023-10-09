@@ -1,0 +1,11 @@
+type BookType {
+  id: String!
+  name: String!
+  rating: Int
+  authors: [AuthorType]!
+  editor: AuthorType!
+}
+
+type AuthorType {
+  name: String!
+}
