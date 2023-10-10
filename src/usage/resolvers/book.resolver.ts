@@ -6,10 +6,8 @@ type FilterInput = Omit<Filter, "__kind">;
 type ResponseType = Omit<Response, "__kind">;
 
 export class BookResolver {
-  book(_, input: FilterInput): ResponseType {
-    console.log(input);
-    const books = <Book[]>bookStore.filterByRating(input.rating);
-    console.log(books);
+  book(_, args: { input: FilterInput }): ResponseType {
+    const books = <Book[]>bookStore.filterByRating(args.input.rating);
     return { books };
   }
 }
