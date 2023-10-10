@@ -61,12 +61,7 @@ export const books: Book[] = [
 function filterByRating(rating?: number): Book[] {
   if (!rating) return books;
 
-  return books
-    .filter((b) => b.rating == rating)
-    .map((b) => {
-      console.log(b);
-      return b;
-    });
+  return books.filter((b) => b.rating == rating);
 }
 
 export default { filterByRating };
