@@ -2,6 +2,10 @@
 
 A simple library for converting typescript interfaces into GraphQL schemas.
 
+# Demo
+
+Demo can be found [here](https://vimeo.com/873042588?share=copy)
+
 ### Usage
 
 ```ts
